@@ -76,7 +76,6 @@ def main(**kwargs):
         torch.xpu.manual_seed(train_config.seed)
     torch.manual_seed(train_config.seed)
     random.seed(train_config.seed)
-
     if train_config.enable_fsdp:
         setup()
         # torchrun specific
@@ -293,6 +292,7 @@ def main(**kwargs):
         if train_config.use_wandb:
             for k,v in results.items():
                 wandb_run.summary[k] = v
+
 
 if __name__ == "__main__":
     fire.Fire(main)

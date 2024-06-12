@@ -9,7 +9,11 @@ class samsum_dataset:
     dataset: str =  "samsum_dataset"
     train_split: str = "train"
     test_split: str = "validation"
-    
+
+class assistant_backward_dataset:
+    dataset: str =  "assistant_backward_dataset"
+    train_split: str = "train"
+    test_split: str = "test"   
     
 @dataclass
 class grammar_dataset:
